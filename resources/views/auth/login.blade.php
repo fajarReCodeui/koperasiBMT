@@ -24,35 +24,22 @@
                                         </svg>
                                 </div>
                             </div>
-                            <input type="email"
-                                   name="email"
-                                   id="email"
-                                   class="form-control border-0 text-muted {{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                   value="{{ old('email') }}"
-                                   placeholder="Email"
-                                   required autofocus>
+                            <input type="email" name="email" id="email" class="form-control border-0 text-muted {{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ old('email') }}" placeholder="Email" required autofocus>
                         </div>
                         <div class="input-group mb-2 mt-3 shadow-sm">
                             <div class="input-group-prepend">
                                 <div class="input-group-text border-0 bg-white">
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" >
-                                            <path fill="#eeeeee" d="M12.3 3.7l4 4L4 20H0v-4L12.3 3.7zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z" />
-                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" >
+                                        <path fill="#eeeeee" d="M12.3 3.7l4 4L4 20H0v-4L12.3 3.7zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z" />
+                                    </svg>
                                 </div>
                             </div>
-                            <input type="password"
-                                   name="password"
-                                   id="password"
-                                   class="form-control border-0 text-muted {{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                   placeholder="Password"
-                                   required>
-
-                                   @if ($errors->has('password'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('password') }}</strong>
-                                        </span>
-                                    @endif
+                            <input type="password" name="password" id="password" class="form-control border-0 text-muted {{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Password" required>
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                         </div>
 
                         <div class="form-group row pt-3">

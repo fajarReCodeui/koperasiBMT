@@ -16,13 +16,13 @@ use Faker\Generator as Faker;
 
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'nip' => '08822738999',
+        'nik' => 'KPR2022011101',
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'jenis_kelamin' => 'Pria',
-        'alamat' => $faker->address,
-        'phone' => '081345768690',
+        'nik' => '213214341342',
+        'tempat_lahir' => 'bekasi',
+        'tanggal_lahir' => '21-11-2022',
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
         'remember_token' => Str::random(10),
     ];

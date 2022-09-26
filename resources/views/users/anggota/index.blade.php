@@ -54,41 +54,44 @@
             </div>
         </div>
     </div>
-    <table class="table table-striped">
-        <thead>
-            <th scope="col">NIK</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Jenis Kelamin</th>
-            <th scope="col">Jabatan</th>
-            <th scope="col">Alamat</th>
-            <th scope="col">Tanggal Bergabung</th>
-            <th scope="col">Telepon</th>
-            <th scope="col">Akses</th>
-        </thead>
-        <tbody>
-            @forelse ($anggotas as $anggota)
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <th scope="col">No.Anggota</th>
+                <th scope="col">Nama</th>
+                <th scope="col">T.T.L</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">Telephone</th>
+                <th scope="col">NO.KTP</th>
+                <th scope="col">Pendidikan Terakhir</th>
+                <th scope="col">Pekerjaan</th>
+                <th scope="col">Suami/Istri/Orang Tua</th>
+            </thead>
+            <tbody>
+                @forelse ($anggotas as $anggota)
                 <tr>
-                    <th>
-                        <a href="{{route('users.edit', $anggota->id)}}">
-                            {{$anggota->nip}}
+                    <td>
+                        <a href="{{route('users.edit', $pegawai->id)}}">
+                            {{$pegawai->nik}}
                         </a>
-                    </th>
-                    <td>{{$anggota->name}}</td>
-                    <td>{{$anggota->jenis_kelamin}}</td>
-                    <td>{{$anggota->jabatan}}</td>
-                    <td>{{$anggota->alamat}}</td>
-                    <td>{{$anggota->created_at->format('d-m-Y')}}</td>
-                    <td>{{$anggota->phone}}</td>
-                    <td>{{$anggota->roles->implode('name', ', ')}}</td>
-                </tr>
-            @empty
+                    </td>
+                    <td>{{$pegawai->name}}</td>
+                    <td>{{$pegawai->tempat_lahir}}, {{$pegawai->tanggal_lahir}}</td>
+                    <td>{{$pegawai->alamat}}</td>
+                    <td>{{$pegawai->phone}}</td>
+                    <td>{{$pegawai->ktp}}</td>
+                    <td>{{$pegawai->pendidikan_terakhir}}</td>
+                    <td>{{$pegawai->pekerjaan}}</td>
+                    <td>{{$pegawai->nama_wakil}}</td>
+                    @empty
                 <tr>
-                    <td colspan="7">
+                    <td colspan="9">
                         Data anggota belum tersedia
                     </td>
                 </tr>
-            @endforelse
-        </tbody>
-    </table>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
 </div>
 @endsection

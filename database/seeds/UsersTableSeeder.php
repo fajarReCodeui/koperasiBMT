@@ -15,11 +15,21 @@ class UsersTableSeeder extends Seeder
     {
         // ketua
         $ketua = factory(User::class)->create([
-            'nip'      => '199312102018081001',
-            'name'     => 'KETUA',
-            'email'    => 'ketua@koperasi.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('koperasi'),
+            'nik'                   => 'KPR2022011101',
+            'name'                  => 'KETUA',
+            'email'                 => 'ketua@koperasi.com',
+            'email_verified_at'     => now(),
+            'password'              => bcrypt('koperasi'),
+            'nik'                   => '12345678910111213',
+            'tempat_lahir'          => 'Bekasi',
+            'tanggal_lahir'         => '12-01-1991',
+            'alamat'                => 'Bekasi',
+            'phone'                 => '3423423452',
+            'ktp'                   => '12345678910111213',
+            'pendidikan_terakhir'   => 'S1',
+            'pekerjaan'             => 'Admin Kantor',
+            'nama_wakil'            => 'John Doe',
+
         ]);
 
         $ketua->assignRole('ketua');
@@ -30,11 +40,20 @@ class UsersTableSeeder extends Seeder
 
         // bendahara
         $bendahara = factory(User::class)->create([
-            'nip'      => '199312102018081002',
-            'name'     => 'BENDAHARA',
-            'email'    => 'bendahara@koperasi.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('koperasi'),
+            'nik'                   => 'KPR2022011102',
+            'name'                  => 'BENDAHARA',
+            'email'                 => 'bendahara@koperasi.com',
+            'email_verified_at'     => now(),
+            'password'              => bcrypt('koperasi'),
+            'nik'                   => '12345678910111213',
+            'tempat_lahir'          => 'Bekasi',
+            'tanggal_lahir'         => '12-01-1991',
+            'alamat'                => 'Bekasi',
+            'phone'                 => '3423423452',
+            'ktp'                   => '12345678910111213',
+            'pendidikan_terakhir'   => 'S1',
+            'pekerjaan'             => 'Admin Kantor',
+            'nama_wakil'            => 'John Doe',
         ]);
 
         $bendahara->assignRole('bendahara');
@@ -45,12 +64,20 @@ class UsersTableSeeder extends Seeder
 
         // anggota
         $anggota = factory(User::class)->create([
-            'nip'      => '199312102018081004',
-            'name'     => 'ANGGOTA',
-            'email'    => 'anggota@koperasi.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('koperasi'),
-            'phone'    => '89672650972',
+            'nik'                   => 'KPR2022011103',
+            'name'                  => 'ANGGOTA',
+            'email'                 => 'anggota@koperasi.com',
+            'email_verified_at'     => now(),
+            'password'              => bcrypt('koperasi'),
+            'nik'                   => '12345678910111213',
+            'tempat_lahir'          => 'Bekasi',
+            'tanggal_lahir'         => '12-01-1991',
+            'alamat'                => 'Bekasi',
+            'phone'                 => '3423423452',
+            'ktp'                   => '12345678910111213',
+            'pendidikan_terakhir'   => 'S1',
+            'pekerjaan'             => 'Admin Kantor',
+            'nama_wakil'            => 'John Doe',
         ]);
 
         $anggota->assignRole('anggota');

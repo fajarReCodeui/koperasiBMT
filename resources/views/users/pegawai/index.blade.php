@@ -23,41 +23,45 @@
                 </a>
             </div>
         </div>
-        <table class="table table-striped">
-            <thead>
-                <th scope="col">NIP</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Jenis Kelamin</th>
-                <th scope="col">Jabatan</th>
-                <th scope="col">Alamat</th>
-                <th scope="col">Telepon</th>
-                <th scope="col">Akses</th>
-                <th scope="col">Tanggal Bergabung</th>
-            </thead>
-            <tbody>
-                @forelse ($pegawais as $pegawai)
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <th scope="col">No.Anggota</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">T.T.L</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col">NO.KTP</th>
+                    <th scope="col">Pendidikan Terakhir</th>
+                    <th scope="col">Pekerjaan</th>
+                    <th scope="col">Suami/Istri/Orang Tua</th>
+                </thead>
+                <tbody>
+                    @forelse ($pegawais as $pegawai)
                     <tr>
-                        <th>
+                        <td>
                             <a href="{{route('users.edit', $pegawai->id)}}">
-                                {{$pegawai->nip}}
+                                {{$pegawai->nik}}
                             </a>
-                        </th>
+                        </td>
                         <td>{{$pegawai->name}}</td>
-                        <td>{{$pegawai->jenis_kelamin}}</td>
-                        <td>{{$pegawai->jabatan ?? '-'}}</td>
+                        <td>{{$pegawai->tempat_lahir}}, {{$pegawai->tanggal_lahir}}</td>
                         <td>{{$pegawai->alamat}}</td>
                         <td>{{$pegawai->phone}}</td>
-                        <td>{{$pegawai->roles->implode('name',', ')}}</td>
-                        <td>{{$pegawai->created_at->format('Y-m-d')}}</td>
+                        <td>{{$pegawai->ktp}}</td>
+                        <td>{{$pegawai->pendidikan_terakhir}}</td>
+                        <td>{{$pegawai->pekerjaan}}</td>
+                        <td>{{$pegawai->nama_wakil}}</td>
                     </tr>
-                @empty
+                    @empty
                     <tr>
-                        <td colspan="7">
+                        <td colspan="9">
                             Data pegawai belum tersedia
                         </td>
                     </tr>
-                @endforelse
-            </tbody>
-        </table>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
 @endsection

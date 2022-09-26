@@ -81,12 +81,12 @@
         @endif
 
         <div class="content">
-            <img src="{{asset('asset/img/tamansiswa.png')}}"
+            <img src="{{asset('asset/img/logo.png')}}"
                  width="50%" height="50%" alt="">
             <div class="title">
                 Koperasi
             </div>
-            <div class="second-title">SMK TAMAN SISWA</div>
+            <div class="second-title">Simpan Pinjam</div>
         </div>
     </div>
 </body>
